@@ -2,7 +2,7 @@ import fs from "fs";
 
 const data = "I am fresh and young";
 const errMsg = "FS operation failed";
-const path = './src/fs/files/fresh.txt'
+const path = "./src/fs/files/fresh.txt";
 
 const create = async () => {
     fs.access(path, fs.constants.F_OK, (err) => {

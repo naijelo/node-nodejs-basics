@@ -1,5 +1,4 @@
 import fs from "fs";
-import { copyFile } from 'node:fs/promises';
 
 const pathToWrong = "./src/fs/files/wrongFilename.txt";
 const errMsg = "FS operation failed";
