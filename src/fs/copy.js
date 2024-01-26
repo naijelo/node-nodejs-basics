@@ -1,5 +1,5 @@
 import fs from "fs";
-import { copyFile } from 'node:fs/promises';
+import { copyFile } from "node:fs/promises";
 
 const pathToFiles = "./src/fs/files";
 const pathToCopy = "./src/fs/files_copy";
