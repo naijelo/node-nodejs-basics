@@ -2,18 +2,12 @@ import fs from "fs";
 
 const data = "I am fresh and young";
 const errMsg = "FS operation failed";
-const path = "./src/fs/files/fresh.txt";
+const pathToFresh = new URL("files/fresh.txt", import.meta.url);
 
 const create = async () => {
-    fs.access(path, fs.constants.F_OK, (err) => {
+    fs.writeFile(pathToFresh, data, {flag: "wx"}, (err) => {
         if (err) {
-            fs.writeFile(path, data, (err) => {
-                if (err) {
-                    console.log(err);
-                }
-            });
-        } else {
-            console.log(errMsg);
+            throw Error(errMsg);
         }
     });
 }
