@@ -8,7 +8,7 @@ const parseEnv = () => {
             resultArray.push(result);
         }
     }
-console.log(resultArray.join(", "));
+console.log(resultArray.join("; "));
 };
 
 parseEnv();
