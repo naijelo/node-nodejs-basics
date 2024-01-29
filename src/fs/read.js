@@ -9,7 +9,7 @@ const errMsg = "FS operation failed";
 const read = async () => {
     fs.access(pathToRead, fs.constants.F_OK, (err) => {
         if (err) {
-            console.log(errMsg);
+            throw Error(errMsg);
         } else {
             const readStream = fs.createReadStream(pathToRead);
             readStream.on("data", (chunk) => {
